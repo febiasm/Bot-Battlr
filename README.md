@@ -1,7 +1,7 @@
 # Bot-Battlr
 
-This application is a platform that allows a user to custom build their own Bot Army. It allows users to view information about various bots, including their name, health, damage, armor, bot_class and catchphrase. Users can browse through the bots desplayed in cards and recrut a bot by clicking on its card and Discharge a bot from their service forever, by clicking the red button marked
-  "x". The application is designed to be user-friendly and visually appealing, with styles that enhance the layout and appearance of various elements on the page. Overall, the application aims to provide a convenient and straightforward way for users to enlisted a bot to their army.
+This application is a platform that allows a user to custom build their own Bot Army. It allows users to view information about various bots, including their name, health, damage, armor, bot_class, and catchphrase. Users can browse through the bots displayed in cards and recruit a bot by clicking on its card and Discharge a bot from their service forever, by clicking the red button marked
+  "x". The application is designed to be user-friendly and visually appealing, with styles that enhance the layout and appearance of various elements on the page. Overall, the application aims to provide a convenient and straightforward way for users to enlist a bot into their army.
 
 ## Running the Live Hosted Application
 Click on this link to run the application: https://bot-battlr-lime.vercel.app/
