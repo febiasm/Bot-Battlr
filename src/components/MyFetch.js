@@ -66,6 +66,7 @@ function MyFetch() {
                   <h5> Catchphrase:</h5>
                   <h6>{bot.catchphrase}</h6>{" "}
                 </p>
+                <button className="del btn btn-danger"> ❌ </button>
                 
               </div>
             </div>
@@ -112,7 +113,7 @@ const YourBotArmy = memo(({ selectedBots, setSelectedBots }) => {
   <h5> Catchphrase:</h5>
   <h6>{selectedBot.catchphrase}</h6>{" "}
   </p>
-  <p >butt</p>
+  <button className="del btn btn-danger"> ❌ </button>
   </div>
   </div>
   </div>
