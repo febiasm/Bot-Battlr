@@ -66,7 +66,7 @@ function MyFetch() {
                   <h5> Catchphrase:</h5>
                   <h6>{bot.catchphrase}</h6>{" "}
                 </p>
-                <p >butt</p>
+                
               </div>
             </div>
           </div>
