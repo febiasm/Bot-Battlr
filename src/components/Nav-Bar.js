@@ -28,12 +28,12 @@ const NavBar = () => {
                     {"Dropdown"}
                   </a>
                   <ul className="dropdown-menu dropdown-menu-dark">
-                    <li><a className="dropdown-item" href="#">{"Action"}</a></li>
-                    <li><a className="dropdown-item" href="#">{"Another action"}</a></li>
+                    <li><a className="dropdown-item" href="#">{"Active bots"}</a></li>
+                    <li><a className="dropdown-item" href="#">{"recruited bots"}</a></li>
                     <li>
                       <hr className="dropdown-divider"/>
                       </li>
-                    <li><a className="dropdown-item" href="#">{"Something else here"}</a></li>
+                    <li><a className="dropdown-item" href="#">{"Bot-Battlr"}</a></li>
                   </ul>
                 </li>
               </ul>
