@@ -22,13 +22,20 @@ function MyFetch() {
 
   return (
     <div>
-      <YourBotArmy selectedBots={selectedBots} />
+           <YourBotArmy selectedBots={selectedBots} setSelectedBots={setSelectedBots} />
       <div className="ac" style={{ display: "flex", flexWrap: "wrap" }}>
         {data.map((bot) => (
           <div style={{ width: "18rem", margin: "10px" }}>
             <div
               className="card"
-              onClick={() => setSelectedBots([...selectedBots, bot])}
+              onClick={() => {
+                const existingBot = selectedBots.find((b) => b.name === bot.name);
+                if (existingBot) {
+                    setSelectedBots(selectedBots.filter((b) => b.name !== bot.name));
+                } else {
+                    setSelectedBots([...selectedBots, bot])
+                }
+              }}
             >
               <img
                 src={bot.avatar_url}
@@ -59,6 +66,7 @@ function MyFetch() {
                   <h5> Catchphrase:</h5>
                   <h6>{bot.catchphrase}</h6>{" "}
                 </p>
+                <p >butt</p>
               </div>
             </div>
           </div>
@@ -67,47 +75,51 @@ function MyFetch() {
     </div>
   );
 }
-const YourBotArmy = memo(({ selectedBots }) => {
+
+const YourBotArmy = memo(({ selectedBots, setSelectedBots }) => {
   return (
     <div className="yourBot">
       {selectedBots.map((selectedBot) => (
-        <div>
+        <div className="select" onClick={() => setSelectedBots(selectedBots.filter(b => b.name !== selectedBot.name))}>
           <h3>Your Selected Bot</h3>
           <div className="ac" style={{ display: "flex", flexWrap: "wrap" }}>
-          <div className="card">
-          <img
-            src={selectedBot.avatar_url}
-            className="card-img-top"
-            alt={selectedBot.name}/>
-                <h5 className="botName card-title">{selectedBot.name}</h5>
-                <div style={{ display: "flex" }}>
-                  <p
-                    className="Health card-text"
-                    style={{ marginRight: "40px", fontSize: "25px" }}
-                  >
-                    ⚕️ : {selectedBot.health}{" "}
-                  </p>
-                  <p className="damage card-text">☠ : {selectedBot.damage}</p>
-                </div>
-                <div style={{ display: "flex" }}>
-                  <p
-                    className="Armor card-text"
-                    style={{ marginRight: "40px" }}
-                  >
-                    🛡️ : {selectedBot.armor}
-                  </p>
-                  <p className="Class card-text">⚔️ : {selectedBot.bot_class}</p>
-                </div>
-                <p className="Catchphrase card-text">
-                  <h5> Catchphrase:</h5>
-                  <h6>{selectedBot.catchphrase}</h6>{" "}
-                </p>
-              </div>
-            </div>
-            </div>
-      ))}
-    </div>
-    
+            <div className="card">
+              <img
+                src={selectedBot.avatar_url}
+                className="card-img-top"
+                alt={selectedBot.name}
+              />
+              <h5 className="botName card-title">{selectedBot.name}</h5>
+  <div style={{ display: "flex" }}>
+  <p
+  className="Health card-text"
+  style={{ marginRight: "40px", fontSize: "25px" }}
+  >
+  ⚕️ : {selectedBot.health}{" "}
+  </p>
+  <p className="damage card-text">☠ : {selectedBot.damage}</p>
+  </div>
+  <div style={{ display: "flex" }}>
+  <p
+  className="Armor card-text"
+  style={{ marginRight: "40px" }}
+  >
+  🛡️ : {selectedBot.armor}
+  </p>
+  <p className="Class card-text">⚔️ : {selectedBot.bot_class}</p>
+  </div>
+  <p className="Catchphrase card-text">
+  <h5> Catchphrase:</h5>
+  <h6>{selectedBot.catchphrase}</h6>{" "}
+  </p>
+  <p >butt</p>
+  </div>
+  </div>
+  </div>
+  ))}
+  </div>
+  
   );
-});
-export default MyFetch;
+  });
+  
+  export default MyFetch;
