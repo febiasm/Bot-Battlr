@@ -5,9 +5,66 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: ;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.card {
+  
+  margin: 10px;
+  width: 18rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-body button{
+margin-top: 2rem;
+}
+h6 {
+  font-size: 10.5px;
+}
+.yourBot{
+  margin-top: 200px;
+  color: brown;
+}
+.ac{
+  margin-top: 200px;
+}
+
+.navbtn{
+ background-color: orange; 
+}
+/* .botName{
+
+} */
+.damage{
+  display: "flex";
+  color:crimson;
+  font-size: 25px;
+}
+.Health{
+  color: blue;
+  font-size: 25px;
+}
+p {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Armor{
+  font-size: 25px;
+}
+.Class{
+  font-size: 20px;
+}
+h5{
+  text-align: center;
+  font-size: 25px;
+  color: coral;
+}
+.del{
+  width: 250px;
 }
